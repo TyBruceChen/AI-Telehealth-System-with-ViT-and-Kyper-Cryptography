@@ -1,0 +1,2 @@
+librosa #this library is for signal processing, will not work with image data
+pycryptodome==3.14.1

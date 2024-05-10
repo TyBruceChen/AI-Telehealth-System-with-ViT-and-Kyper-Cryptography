@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+    <title>Web-App Tele Health</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="CS212 NAU homework3, Tianyi Chen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+</head> 
+
+<body>
+    <header>
+       <nav>
+            <p>
+                <div class="navigationbar">
+                <div id="navigationitem"><a href="/">Home</a></div>
+                <div id="navigationitem"><a href="https://sites.google.com/nau.edu/ai-telehealth/home">Project Introduction</a></div>
+                <div id="navigationitem"><a href="https://ceias.nau.edu/capstone/d4p/">NAU Capstone Page</a></div>
+                </div>
+            </p>
+        </nav>
+    </header>
+
+    <div class="container">
+    <main>
+        <h1>AI-Telehealth(Test Page)<sup>by Tech-health Comparator Group</sup></h1>
+        <form action="../login/index.html" method="get">
+            <section id="basic information">
+                <div class="CSStest"><h4>Basic Information</h4></div>
+
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter your full name plz" required>
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <br><br>
+
+                <div class="extra-gender">
+                    <label for="gender">Gender :</label>
+
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male">
+
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female">
+
+                    <label for="others">Others</label>
+                    <input type="radio" name="gender" id="others">
+                </div>
+                <br>
+                
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+                <br><br>
+
+                <div class="Dropdown Selections">
+                    <label for="profession">Profession:</label>
+                    <select name="profession" id="profession" required>
+                        <option value="student">Student</option>
+                        <option value="working-professional">Working Professional</option>
+                        <option value="professor">Professor</option>
+                    </select>
+                    <br><br>
+                </div>
+            </section>
+
+            <section id="extra information">
+                <h4>Extra Inforamtion</h4>
+
+                
+                <label for="subscribe">Agree Subscription to <a href="https://en.wikipedia.org/wiki/Newsletter#:~:text=A%20newsletter%20is%20a%20printed,of%20interest%20to%20its%20recipients.">Newsletter</a></label>
+                <input type="checkbox" name="subscribe" id="subscribe">
+            </section>
+            <br>
+
+            <input type="submit" value="SUBMIT">
+        </form>
+        <br><br>
+
+        <h2>Formal Content</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="pic">Chest X-ray for detecting COVID19: </label>
+            <br>    
+            <input type="file" name="pic" id="pic">
+            <br><br>
+            
+            <p>The prediction result of uploaded image is: <div id="prediction">waiting to be uploaded</div></p>
+
+            <input type="submit" value="Upload">
+        </form>        
+    
+    <br>
+    </main>
+
+    <footer>
+        <h7>Author: TeleHealth (NAU 2023-2024 EE capstone) <br> Team: Tech Health Comparator (Tianyi Chen, Ian Phillipi)</h7>
+    </footer>
+    </div>
+</body>
+</html>

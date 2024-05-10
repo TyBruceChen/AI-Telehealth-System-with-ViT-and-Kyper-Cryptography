@@ -1,0 +1,163 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+    <title>Web-App Tele Health</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="AI-Telehealth, COVID-19 Detector">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+</head> 
+
+<body>
+    <header>
+       <nav>
+            <p>
+                <div class="navigationbar">
+                    <div id="navigationitem"><a href="/">Home</a></div>
+                    <div id="navigationitem"><a href="https://sites.google.com/nau.edu/ai-telehealth/home">Project Site</a></div>
+                    <div id="navigationitem"><a href="/#System">System Experience</a></div>
+                    <div id="navigationitem"><a href="/#pure-prediction">AI Diagnose Experience</a></div>
+                    <div id="navigationitem"><a href="https://ceias.nau.edu/capstone/d4p/">NAU Capstone Page</a></div>
+                </div>
+            </p>
+        </nav>
+    </header>
+
+    <div class="container">
+    <main>
+        <h1>AI-Telehealth(Test Page)<sup style="font-size: medium;">by Tech-health Comparator Group</sup></h1>
+        <br>
+
+        <div style="text-align: left;"><p>Our Research Paper(s): </p><br>
+            <a href="https://doi.org/10.1016/j.health.2024.100332" style="position: relative; top: -30px">A vision transformer machine learning model for COVID-19 diagnosis using chest X-ray images (Officially published at Healthcare Analytics (Journal))</a><br>
+            <a href="https://www.researchgate.net/publication/377103421_High-accuracy_fine-tuned_vision_transformer_model_for_diagnosing_COVID-19_from_chest_X-ray_images" style="position: relative; top: -10px">High-accuracy fine-tuned vision transformer model for diagnosing COVID-19 from chest X-ray images (Preprint Version)</a>
+        </div>
+        
+        <hr>
+        <hr>
+        <section id="System">
+        <br>
+        <div id="test">
+            <br>
+            <p>Images Used for Online Testing. Click the botton to download corresponding image.</p>
+            <div id="test-img-download">
+                <button class="testImage">
+                    <a href="static/sample_imgs/COVID-3587.png" download="COVID-you can randomly name it - Name is just for verification.png">COVID-19 Sample</a>
+                </button>
+                <button class="testImage">
+                    <a href="static/sample_imgs/Lung_Opacity-5994.png" download="Lung Opacity-you can randomly name it - Name is just for verification.png">Lung Opacity Sample</a>
+                </button>
+                <button class="testImage">
+                    <a href="static/sample_imgs/Normal-10182.png" download="Normal-you can randomly name it - Name is just for verification.png">Normal Sample</a>
+                </button>
+                <button class="testImage">
+                    <a href="static/sample_imgs/Viral Pneumonia-1254.png" download="Viral Pneumonia-you can randomly name it - Name is just for verification.png">Viral Pneumonia (non-COVID infection) Sample</a>
+                </button>
+            </div>
+            <br>
+            <div id="keyRequestUpload">
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <p style="text-align: left; position: relative; left: 10%;"><b>1.</b> Click button to request for the public key (input random value)</p>
+                    <input type="text" id="keyRequest2" name="keyRequest" style="position: relative; top: -8px;">
+                    <br>
+                    <input type="submit" value="Request Your Encryption Key (public) first">
+                </form>
+                <br>
+                <button>Please Request Public Key Download First</button>
+            </div>
+
+            <br><hr>
+            <div id="download-test">
+                <p>Sample cyphertext package which goes through our proposed system:</p>
+                <button><a href="static/encrypted_data.zip" download="cypher_text.zip">Download Test: this is the cypher text package from the encrypted image</a></button><br>
+            </div><hr><br>
+
+            <div id="decry-predict">
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <p style="text-align: left; position: relative; left: 10%;"><b>2.</b> Choose encrypted cyphertext zip file to upload<p>
+                    <p>Note: All cyphertexts should be contained inside one folder and then zipped into a package</p>
+                    <input type="file" id="cyphertext" name="cypher_zip"><br>
+                    <br>
+
+                    <p id="decry-predict-result" style="display: none; color: rgb(0, 0, 218); text-align: center;">Decrypt cyphertext... reconstruct the cyphertext... Analyze the recovered image...</p>
+                    <p style="color: rgb(92, 0, 0);" id="result-from-system"></p>
+
+                    <p style="text-align: left; position: relative; left: 10%;"><b>3.</b> Upload your public key for encrypting the Grad-CAM visualization</p>
+                    <p>Note: If you want to get the Viz, then upload the cyphertext package and the public key generated by you at one time</p>
+                    <input type="file" id="publicKey" name="pubkey_enc"><br>
+
+                    <p id="viz-encrypt" style="display: none; color: rgb(0, 0, 218); text-align: center;">Generating Grad-CAM Viz... Saving public key generated by the client... Encrypting the Viz... Saving cyphertexts and Compressing...</p>
+                    <a style="color: rgb(92, 0, 0);" id="viz-cypher-download"></a>
+                    <br>
+                    <input type="submit" value="Upload">
+                </form>
+                <br>
+                <button>Grad-CAM visualization will be here after finishing all 3 steps</button>
+                <br>
+            </div>
+            <br>
+            <hr>
+        </div>
+        </section>  
+
+        <div id="system-graph">
+            <img src="static/System.png" alt="System" width="90%">
+            <p style="position: relative; top: -10px;"><b>The Whole System Workflow</b></p>
+        </div>
+        
+        <div id="datasetImg">
+            <img src="static/dataset_img_display.png" alt="Dataset Example" width="90%">
+            <p style="text-align: center; font-size: medium; position: relative; top: -10px;">Dataset Samples</p>
+        </div>
+    
+        <div>
+            <img src="static/ViT structure Paper.png" alt="Our Proposed Model" width="90%">
+            <p style="text-align: center; font-size: medium;">The Proposed Model from Our Research (95.79% Accuracy)</p>
+        </div>
+        
+        <section id="pure-prediction">
+        <br><br>
+        <div id="imgUpload">
+            <h2>COVID19 Detection</h2>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <br>
+                <label for="pic">Chest X-ray for detecting COVID19: </label>
+                <br>    
+                <input type="file" name="pic" id="pic">
+                <br><br>
+                
+                <p>The prediction result of uploaded image is: <div id="prediction">waiting to be uploaded</div></p>
+                <div style="display: grid; justify-content: center;">
+                    <img alt="Viz" id="resultViz" src="static/Confusion Matrix.png" style="display: none; max-width: 200px;">
+                </div>
+                <input type="submit" value="Upload (after you choose file)">
+            </form>        
+        </div>
+        </section>
+
+        <br><hr>
+        <div>
+            <img src="static/Confusion Matrix_ROC.png" alt="Confusion Matrix and ROC" width="90%">
+            <p style="text-align: center; font-size: medium;">Confusion Matrix and ROC curve(evaluation based on prediction accuracy)</p>
+        </div>
+        <div id="results-demo">
+            <div>
+                <img src="static/Paper Table.png" alt="Tables" width="90%"><p style="text-align: center; font-size: medium;">Performance Comparison</p>
+            </div>
+
+            <div>
+                <img src="static/Acc_comparison_between_experimented_models.png" alt="Comparison" width="90%">
+                <p style="text-align: center;">Comparison with other state-of-the-art experimented models (Accuracy)</p>
+            </div>
+        </div>
+
+    <br>
+    </main>
+
+    <footer>
+        <h6>Author: TeleHealth <sup>(NAU 2023-2024 EE capstone)</sup> <br> Team: Tech Health Comparator (Tianyi Chen, Ian Phillipi)
+        <br> Contact Info: <a href="mailto: tc922@nau.edu">tc922@nau.edu</a> / <a href="https://github.com/TyBruceChen">TyBruceChen</a><sup>GitHub</sup></h6>
+    </footer>
+    </div>
+</body>
+</html>
