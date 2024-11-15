@@ -8,7 +8,7 @@ Global healthcare systems face growing pressure as populations rise. This can le
 
 ### Implementation details: 
 * The main program is ```app.py```, which is Flask-server-based. We run our code at VS Code with python 3.8. The required packages reside in the ```requirements.txt```. To run the program, enter the command ```python app.run```. The service handling port will open at ```5000``` as configured at the bottom.
-* Some environment parameters need to be configured for re-deployment, they are located at the top of ```app.py```, ```Encryption_Kyber\*.py``` with well-explained comments.
+* Some environment parameters need to be configured for re-deployment, they are located at the top of ```app.py```, ```Encryption_Kyber/*.py``` with well-explained comments.
 * We deploy the system locally and use the [fast reverse proxy (frp)](https://github.com/fatedier/frp) to expose the service to the public by connecting it to the Amazon server. We hold the local system using the Flask Python package.
 
 ### How it looks like:
